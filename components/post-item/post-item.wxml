@@ -1,0 +1,20 @@
+<view class='post-container' catchtap='handleTap' data-post-id="{{item.postId}}">
+  <!--头部  -->
+  <view class='post-author-date'>
+    <image class='post-author' src='{{item.avatar}}'></image>
+    <text class='post-date'>{{item.date}}</text>
+  </view>
+  <!--标题  -->
+  <text class='post-title'>{{item.title}}</text>
+  <!--图片  -->
+  <image class='post-image' src='{{item.imgSrc}}'></image>
+  <!--详情  -->
+  <text class='post-content'>{{item.content}}</text>
+  <!--评论&收藏数  -->
+  <view class='post-like'>
+    <image class='post-like-image' src='/images/icon/chat.png'></image>
+    <text class='post-like-font'>{{item.reading}}</text>
+    <image class='post-like-image' src='/images/icon/view.png'></image>
+    <text class='post-like-font'>{{item.collection}}</text>
+  </view>
+</view>

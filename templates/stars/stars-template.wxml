@@ -1,0 +1,16 @@
+<template name="starsTemplate">
+  <view wx:if="{{average > 0}}" class='stars-container'>
+    <view class='stars'>
+      <block wx:for="{{fullStarCount}}" wx:key="{{key}}">
+        <image src='/images/icon/star.png'></image>
+      </block>
+      <block wx:for="{{empStarCount}}" wx:key="{{key}}">
+        <image src='/images/icon/chat.png'></image>
+      </block>
+    </view>
+    <text class='stars-score'>{{average}}</text>
+  </view>
+  <view wx:else class='stars-container'>
+    <text class='stars-noscore'>暂无评分</text>
+  </view>
+</template>

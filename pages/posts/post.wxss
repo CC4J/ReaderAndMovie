@@ -1,0 +1,7 @@
+/*引入组件样式  */
+@import "/components/post-item/post-item.wxss";
+
+swiper{
+  width: 100%;
+  height: 600rpx;
+}

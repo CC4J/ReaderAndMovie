@@ -1,0 +1,19 @@
+<import src="/templates/movie-list/movie-list-template.wxml" />
+<import src="/templates/movie-gride/movie-gride-template.wxml" />
+<view class='search'>
+  <icon class='search-img' type="search" size="13" color="#405f80" />
+  <input type="text" placeholder="你的名字、速度与激情" placeholder-class='placeholder' bindfocus="onHandleFocus" bindchange="onHandleChange" value="{{searchVal}}"></input>
+  <image wx:if="{{xxShow}}" class='xx-img' src='/images/icon/xx.png' bindtap='onCancelSearch'></image>
+</view>
+<view wx:if="{{containerShow}}" class='container'>
+  <block wx:for="{{movieList}}" wx:for-item="movies" wx:key="{{index}}">
+    <view class='movies-template'>
+      <template class="movies-template" is="movieListTemplate" data="{{movies}}"></template>
+    </view>
+  </block>
+</view>
+<view wx:if="{{searchPanelShow}}" class='search-panner'>
+  <view>
+    <template is="movieGrideTemplate" data="{{movies}}"></template>
+  </view>
+</view>

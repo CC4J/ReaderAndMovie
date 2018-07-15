@@ -1,0 +1,9 @@
+@import "/templates/movie/movie-template.wxss";
+.movie-gride-container{
+  padding-top: 20rpx;
+  padding-left: 15rpx;
+}
+.movie-gride-item{
+  margin-bottom: 20rpx;
+  float: left;
+}

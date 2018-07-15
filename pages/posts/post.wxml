@@ -1,0 +1,17 @@
+<!--轮播图  -->
+<swiper catchtap='handleBanner' indicator-dots="true" indicator-color="white" indicator-active-color="#405f80" autoplay="true" circular="true">
+  <swiper-item>
+    <image src='/images/iqiyi.png' style='width:100%;height:600rpx' data-post-id="5"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='/images/vr.png' style='width:100%;height:600rpx' data-post-id="4"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='/images/wx.png' style='width:100%;height:600rpx' data-post-id="3"></image>
+  </swiper-item>
+</swiper>
+
+<!--列表视图  -->
+<block wx:for="{{postList}}" wx:key="{{index}}">
+  <post-item item="{{item}}" bindmytap="handleItem"></post-item>
+</block>
